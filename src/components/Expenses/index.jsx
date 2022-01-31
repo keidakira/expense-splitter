@@ -1,3 +1,5 @@
+import "./Expenses.css";
+
 const Expenses = (props) => {
   const { expense } = props;
 

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import Expenses from "./components/Expenses";
+import ExpensesList from "./components/Expenses/ExpensesList";
+import NewExpense from "./components/NewExpense";
 
 const INITIAL_EXPENSES = [
   {
@@ -21,11 +22,16 @@ const INITIAL_EXPENSES = [
 ];
 
 const App = () => {
+  const [expenses, setExpenses] = useState(INITIAL_EXPENSES);
+
+  const createExpense = (expense) => {
+    setExpenses((prevState) => [...prevState, expense]);
+  };
+
   return (
-    <div className="expense-list">
-      {INITIAL_EXPENSES.map((expense) => {
-        return <Expenses key={expense.id} expense={expense} />;
-      })}
+    <div className="container">
+      <NewExpense onAddExpense={createExpense} />
+      <ExpensesList data={expenses} />
     </div>
   );
 };
