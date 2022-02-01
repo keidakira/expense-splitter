@@ -1,14 +1,38 @@
 .new-expense {
   padding: 1rem;
-  width: 40%;
+  width: 50%;
 }
 
 .new-expense__container {
-  display: flex;
-  gap: 1rem;
   padding: 1rem;
-  justify-content: space-between;
   background-color: #f4f4f4;
   border-bottom: 1px solid #e0e0e0;
   border-radius: 0.5rem;
+}
+
+.new-expense__inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.new-expense__button {
+  margin: 0 0 0 auto;
+  width: calc(33% - 1rem);
+}
+
+@media screen and (max-width: 768px) {
+  .new-expense__inputs {
+    flex-direction: column;
+  }
+
+  .new-expense {
+    width: 100%;
+  }
+
+  .new-expense__button {
+    width: 100%;
+  }
 }

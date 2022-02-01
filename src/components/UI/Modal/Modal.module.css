@@ -1,0 +1,32 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__header {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.modal__container {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal__actions {
+  display: flex;
+  margin-top: 2rem;
+  gap: 1rem;
+}

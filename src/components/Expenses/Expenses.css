@@ -1,9 +1,31 @@
 .expense {
   background-color: #f4f4f4;
   border-bottom: 1px solid #d6d6d6;
-  display: flex;
-  justify-content: space-between;
   padding: 0.6rem 1.2rem;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.expense__item {
+  display: flex;
+  gap: 1rem;
+}
+
+.expense__item .expense__item-date {
+  min-width: 100px;
+}
+
+.expense__item .expense__item-name {
+  flex-grow: 1;
+}
+
+.expense__item .expense__item-price {
+  text-align: right;
+  min-width: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .expense-list {
+    width: 100%;
+  }
 }
